@@ -1204,7 +1204,7 @@ int k, l, m, n, o, p, r = 10;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\n");
-            Console.Write("Asıl kıyamet,makineler uyandığında olur!-Barış");
+            Console.Write("\tAsıl kıyamet,makineler uyandığında olur!-Barış");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write(" " + "YARGIDAĞITAN");
             Console.ForegroundColor = ConsoleColor.Yellow;
