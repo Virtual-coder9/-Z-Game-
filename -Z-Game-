@@ -1,9 +1,10 @@
-int k, l, m, n, o, p;
+int k, l, m, n, o, p, r = 10;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.CursorVisible = false;
             Console.SetCursorPosition(1, 1);
-            for (k = 0; k <= 99; k += 9)
+            for (k = 0; k <= 100; k += 10)
             {
+                r--;
                 Console.Write("\n");
                 for (l = 0; l < k; l++)
                 {
@@ -11,15 +12,20 @@ int k, l, m, n, o, p;
                 }
                 Console.Write("%" + k);
                 Console.SetCursorPosition(1, 1);
-                System.Threading.Thread.Sleep(1);
+                System.Threading.Thread.Sleep(10);
                 if (k != 100)
                 {
                     Console.WriteLine("\n");
                     Console.Write("Yükleniyor");
-                    for (m = 1; m < 4; m++)
+                    for (m = 1; m <= 10; m++)
                     {
-                        System.Threading.Thread.Sleep(1);
-                        Console.Write(".");
+                        System.Threading.Thread.Sleep(10);
+                        Console.Write("#");
+                    }
+                    if (r != 0)
+                    {
+                        System.Threading.Thread.Sleep(100);
+                        Console.WriteLine("( " + r + " saniye kaldı)");
                     }
                     Console.Clear();
                 }
@@ -207,16 +213,16 @@ int k, l, m, n, o, p;
             System.Threading.Thread.Sleep(150);
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("                                        ___________   _______________                 ________       ");
-            Console.WriteLine("                                ----    |  ____  |   |_______________|               /      |   ----");
-            Console.WriteLine("                              ----      |  |____ |          |   |                   /   /|  |      ----");
-            Console.WriteLine("                            ----        |________|          |   |                  /   /_|  |          ----");
-            Console.WriteLine("                        ----            |________           |   |                 /   _____ |             ----");
-            Console.WriteLine("                            ----        |  ____  |          |   |                /   /____/ |           ----");
-            Console.WriteLine("                              ----      | |____| |          |   |               /           |        ----");
-            Console.WriteLine("                                ----    |________|          |___|              /            |      ----");
+            Console.WriteLine("                                   __________   ________________                 ________       ");
+            Console.WriteLine("                           ----    |  ____  |   |_______________|               /      |     ----");
+            Console.WriteLine("                         ----      |  |____ |          |   |                   /   /|  |        ----");
+            Console.WriteLine("                       ----        |________|          |   |                  /   /_|  |           ----");
+            Console.WriteLine("                     ----          |________           |   |                 /   _____ |             ----");
+            Console.WriteLine("                       ----        |________|          |   |                /   /____/ |               ----");
+            Console.WriteLine("                          ----     | |____| |          |   |               /           |             ----");
+            Console.WriteLine("                              ---- |________|          |___|              /            |           ----");
             Console.WriteLine("                                  ----                                                         ----");
-            Console.WriteLine("     Barış AKIN                                                                                 PüsSamet AKKUŞ    ");
+            Console.WriteLine("     Barış AKIN                                                                   PüsSamet AKKUŞ    ");
             int nWin = 0, nLose = 0;
 
             Console.Title = "Taş Kağıt Makas - Kodzilla";
@@ -293,6 +299,3 @@ int k, l, m, n, o, p;
             Console.ForegroundColor = color;
             Console.Write(text);
             Console.ResetColor();
-        }
-    }
-}
